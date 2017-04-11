@@ -1,0 +1,67 @@
+[{
+    "label": "BBC News",
+    "url": "https://www.bbc.com/news",
+    "partition": "bbc",
+    "host": "www.bbc.com",
+    "hosts": [
+        ".bbc.com",
+        ".bbci.co.uk",
+        ".bbc.co.uk"
+    ]
+}, {
+    "label": "Facebook",
+    "url": "https://www.facebook.com",
+    "partition": "facebook",
+    "host": "www.facebook.com",
+    "hosts": [
+        ".facebook.com",
+        ".fbcdn.net"
+    ]
+}, {
+    "label": "The Guardian",
+    "url": "https://www.theguardian.com",
+    "partition": "guardian",
+    "host": "www.theguardian.com",
+    "hosts": [
+        ".theguardian.com",
+        ".guim.co.uk"
+    ]
+}, {
+    "label": "Linked In",
+    "url": "https://www.linkedin.com",
+    "partition": "linkedin",
+    "host": "www.linkedin.com",
+    "hosts": [
+        ".linkedin.com",
+        ".licdn.com"
+    ]
+}, {
+    "label": "The Onion",
+    "url": "http://www.theonion.com",
+    "partition": "onion",
+    "host": "www.theonion.com",
+    "hosts": [
+        ".theonion.com",
+        ".onionstatic.com",
+        ".onionstudios.com",
+        "ssl.p.jwpcdn.com"
+    ]
+}, {
+    "label": "Twitter",
+    "url": "https://www.twitter.com",
+    "partition": "twitter",
+    "host": "www.twitter.com",
+    "hosts": [
+        "twitter.com",
+        ".twimg.com"
+    ]
+}, {
+    "label": "The Verge",
+    "url": "https://www.theverge.com",
+    "partition": "verge",
+    "host": "www.theverge.com",
+    "hosts": [
+        ".theverge.com",
+        ".vox-cdn.com"
+    ]
+}]

@@ -2,62 +2,9 @@ const {app, BrowserWindow, Menu, shell, session} = require('electron')
 const {parse} = require ('url');
 const defaultMenu = require('electron-default-menu');
 
-const menuItems = [
-  {label: 'BBC News', url: 'https://www.bbc.com/news'},
-  {label: 'Facebook', url: 'https://www.facebook.com'},
-  {label: 'The Guardian', url: 'https://www.theguardian.com'},
-  {label: 'The Onion', url: 'http://www.theonion.com'},
-  {label: 'Twitter', url: 'https://www.twitter.com'},
-  {label: 'The Verge', url: 'http://www.theverge.com'},
+const sites = require('./sites.json');
 
-];
-
-const sites = [{
-  partition: 'onion',
-  host: 'www.theonion.com',
-  hosts: [
-    '.theonion.com',
-    '.onionstatic.com',
-    '.onionstudios.com',
-    'ssl.p.jwpcdn.com'
-  ]
-}, {
-  partition: 'bbc',
-  host: 'www.bbc.com',
-  hosts: [
-    '.bbc.com',
-    '.bbci.co.uk',
-    '.bbc.co.uk',
-  ]
-}, {
-  partition: 'facebook',
-  host: 'www.facebook.com',
-  hosts: [
-    '.facebook.com',
-    '.fbcdn.net',
-  ]
-}, {
-  partition: 'guardian',
-  host: 'www.theguardian.com',
-  hosts: [
-    '.theguardian.com',
-    '.guim.co.uk',
-  ]
-}, {
-  partition: 'twitter',
-  host: 'www.twitter.com',
-  hosts: [
-    'twitter.com',
-    '.twimg.com'
-  ]
-}, {
-  partition: 'verge',
-  host: 'www.theverge.com',
-  hosts: [
-    '.theverge.com',
-    '.vox-cdn.com',
-  ]
-}];
+const menuItems = sites.filter(site => site.url).map(site => ({label: site.label, url: site.url}));
 
 const openUrl = (urlString) => {
   const url = parse(urlString);

@@ -17,6 +17,10 @@ const openUrl = (urlString) => {
   const site = matched[0];
 
   const ses = session.fromPartition('persist:' + site.partition);
+  if (!site.stateful) {
+    ses.clearCache(() => undefined);
+    ses.clearStorageData();
+  }
 
   var mainWindow = new BrowserWindow({
     webPreferences: {
@@ -37,7 +41,7 @@ const openUrl = (urlString) => {
 
     const found = site.hosts.filter(hostPart => url.host.endsWith(hostPart));
 
-    if (found.length > 0) {
+    if (found.length > 0 || site.host === url.host) {
       callback({cancel: false, requestHeaders: details.requestHeaders})
     } else {
       console.log(details.method, details.url);
@@ -75,9 +79,6 @@ app.on('ready', () => {
 
   // Set top-level application menu, using modified template
   Menu.setApplicationMenu(Menu.buildFromTemplate(menu));
-
-  openUrl('https://www.facebook.com');
-
 });
 
 // Quit when all windows are closed.

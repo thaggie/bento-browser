@@ -1,4 +1,14 @@
 [{
+    "label": "Amazon",
+    "url": "https://www.amazon.com",
+    "partition": "amazon",
+    "host": "www.amazon.com",
+    "hosts": [
+        ".amazon.com",
+        ".ssl-images-amazon.com",
+        ".media-amazon.com"
+    ]
+}, {
     "label": "BBC News",
     "url": "https://www.bbc.com/news",
     "partition": "bbc",
@@ -9,6 +19,15 @@
         ".bbc.co.uk"
     ]
 }, {
+    "label": "Boing Boing",
+    "url": "https://boingboing.net",
+    "partition": "boingboing",
+    "host": "boingboing.net",
+    "hosts": [
+        ".boingboing.net",
+        ".wp.com"
+    ]
+}, {
     "label": "Facebook",
     "url": "https://www.facebook.com",
     "partition": "facebook",
@@ -16,6 +35,30 @@
     "hosts": [
         ".facebook.com",
         ".fbcdn.net"
+    ],
+    "stateful": true
+}, {
+    "label": "GMail",
+    "url": "https://www.gmail.com",
+    "partition": "gmail",
+    "host": "www.gmail.com",
+    "hosts": [
+        ".gmail.com",
+        ".google.ca",
+        ".google.com",
+        ".gstatic.com",
+        ".googleusercontent.com"
+    ],
+    "stateful": true
+}, {
+    "label": "Google",
+    "url": "https://www.google.com",
+    "partition": "google",
+    "host": "www.google.com",
+    "hosts": [
+      ".google.ca",
+      ".google.com",
+      ".gstatic.com"
     ]
 }, {
     "label": "The Guardian",
@@ -34,7 +77,8 @@
     "hosts": [
         ".linkedin.com",
         ".licdn.com"
-    ]
+    ],
+    "stateful": true
 }, {
     "label": "The Onion",
     "url": "http://www.theonion.com",
@@ -48,12 +92,24 @@
     ]
 }, {
     "label": "Twitter",
-    "url": "https://www.twitter.com",
+    "url": "https://twitter.com",
     "partition": "twitter",
-    "host": "www.twitter.com",
+    "host": "twitter.com",
     "hosts": [
-        "twitter.com",
+        ".twitter.com",
         ".twimg.com"
+    ],
+    "stateful": true
+}, {
+    "label": "Vancouver Sun",
+    "url": "http://vancouversun.com",
+    "partition": "vancouversun",
+    "host": "vancouversun.com",
+    "hosts": [
+        ".vancouversun.com",
+        ".wp.com",
+        ".p.jwpcdn.com",
+        ".wordpress.com"
     ]
 }, {
     "label": "The Verge",
@@ -63,5 +119,16 @@
     "hosts": [
         ".theverge.com",
         ".vox-cdn.com"
+    ]
+}, {
+    "label": "You Tube",
+    "url": "https://www.youtube.com",
+    "partition": "youtube",
+    "host": "www.youtube.com",
+    "hosts": [
+        ".googlevideo.com",
+        ".youtube.com",
+        ".gstatic.com",
+        ".ytimg.com"
     ]
 }]

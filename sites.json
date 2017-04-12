@@ -1,5 +1,6 @@
 [{
     "label": "Amazon",
+    "shortcut": "CommandOrControl+1",
     "url": "https://www.amazon.com",
     "partition": "amazon",
     "host": "www.amazon.com",
@@ -10,6 +11,7 @@
     ]
 }, {
     "label": "BBC News",
+    "shortcut": "CommandOrControl+2",
     "url": "https://www.bbc.com/news",
     "partition": "bbc",
     "host": "www.bbc.com",
@@ -20,6 +22,7 @@
     ]
 }, {
     "label": "Boing Boing",
+    "shortcut": "CommandOrControl+3",
     "url": "https://boingboing.net",
     "partition": "boingboing",
     "host": "boingboing.net",
@@ -29,6 +32,7 @@
     ]
 }, {
     "label": "Facebook",
+    "shortcut": "CommandOrControl+4",
     "url": "https://www.facebook.com",
     "partition": "facebook",
     "host": "www.facebook.com",
@@ -39,6 +43,7 @@
     "stateful": true
 }, {
     "label": "GMail",
+    "shortcut": "CommandOrControl+5",
     "url": "https://www.gmail.com",
     "partition": "gmail",
     "host": "www.gmail.com",
@@ -52,6 +57,7 @@
     "stateful": true
 }, {
     "label": "Google",
+    "shortcut": "CommandOrControl+6",
     "url": "https://www.google.com",
     "partition": "google",
     "host": "www.google.com",
@@ -62,6 +68,7 @@
     ]
 }, {
     "label": "The Guardian",
+    "shortcut": "CommandOrControl+7",
     "url": "https://www.theguardian.com",
     "partition": "guardian",
     "host": "www.theguardian.com",
@@ -71,6 +78,7 @@
     ]
 }, {
     "label": "Linked In",
+    "shortcut": "CommandOrControl+8",
     "url": "https://www.linkedin.com",
     "partition": "linkedin",
     "host": "www.linkedin.com",
@@ -92,6 +100,7 @@
     ]
 }, {
     "label": "Twitter",
+    "shortcut": "CommandOrControl+9",
     "url": "https://twitter.com",
     "partition": "twitter",
     "host": "twitter.com",

@@ -1,4 +1,11 @@
-const {app, BrowserWindow, Menu, shell, session} = require('electron')
+const {
+  app,
+  BrowserWindow,
+  Menu,
+  shell,
+  session,
+  globalShortcut
+} = require('electron')
 const {parse} = require ('url');
 const defaultMenu = require('electron-default-menu');
 
@@ -60,9 +67,15 @@ const openUrl = (urlString) => {
 
 app.on('ready', () => {
 
+  sites.filter(site => site.shortcut).forEach(site => {
+    console.log(site)
+    globalShortcut.register(site.shortcut, () => {
+        openUrl(site.url);
+    });
+  });
+
   // Get template for default menu
   const menu = defaultMenu(app, shell);
-
 
   // Add custom menu
   menu.splice(4, 0, {

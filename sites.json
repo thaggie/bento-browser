@@ -58,13 +58,11 @@
 }, {
     "label": "Google",
     "shortcut": "CommandOrControl+6",
-    "url": "https://www.google.com",
-    "partition": "google",
-    "host": "www.google.com",
+    "url": "http://duckduckgo.com",
+    "partition": "duckduckgo",
+    "host": "duckduckgo.com",
     "hosts": [
-      ".google.ca",
-      ".google.com",
-      ".gstatic.com"
+      ".duckduckgo.com"
     ]
 }, {
     "label": "The Guardian",
@@ -84,7 +82,8 @@
     "host": "www.linkedin.com",
     "hosts": [
         ".linkedin.com",
-        ".licdn.com"
+        ".licdn.com",
+        ".slidesharecdn.com"
     ],
     "stateful": true
 }, {

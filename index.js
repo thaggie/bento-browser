@@ -6,15 +6,40 @@ const {
   session,
   globalShortcut
 } = require('electron')
+var https = require('https');
+var http = require('http');
+var path = require('path');
 const {parse} = require ('url');
 const defaultMenu = require('electron-default-menu');
 
 const sites = require('./sites.json');
+const shortners = require('./shortners.json');
 
 const menuItems = sites.filter(site => site.url).map(site => ({label: site.label, url: site.url}));
 
+const getPrefsDir = () => {
+  if (process.env.APPDATA) { // Windows
+    return path.resolve(process.env.APPDATA, 'Bento');
+  } else if (process.platform == 'darwin' ) { // Mac
+    return path.resolve(process.env.HOME, 'Library', 'Preferences', 'Bento')
+  } else { // Linux
+    return path.resolve(process.env.HOME, '.bento')
+  }
+};
+
 const openUrl = (urlString) => {
   const url = parse(urlString);
+
+  if (shortners.indexOf(url.host) >= 0) {
+    var options = {method: 'HEAD', host: url.host, path: url.path};
+    var transport = url.transport === 'https:' ? https : http;
+    var req = transport.request(options, function(res) {
+        openUrl(res.headers.location);
+    });
+    req.on('error', (e) => undefined);
+    req.end();
+    return;
+  }
   const matched = sites.filter(site => site.host === url.host);
   if (matched.length === 0) {
     console.log(urlString);
@@ -36,6 +61,8 @@ const openUrl = (urlString) => {
     },
   });
 
+
+
   mainWindow.on('app-command', (e, cmd) => {
     // Navigate the window back when the user hits their mouse back button
     if (cmd === 'browser-backward' && win.webContents.canGoBack()) {
@@ -53,6 +80,11 @@ const openUrl = (urlString) => {
     } else {
       console.log(details.method, details.url);
       callback({cancel: true, requestHeaders: details.requestHeaders})
+
+      if (details.resourceType === 'mainFrame' && details.method === 'GET') {
+        openUrl(details.url);
+        mainWindow.webContents.goBack()
+      }
     }
   });
 
@@ -65,10 +97,14 @@ const openUrl = (urlString) => {
   mainWindow.loadURL(urlString);
 };
 
+
+const prefsDir = getPrefsDir();
+app.setPath('userData', path.resolve(prefsDir, 'data'), app.getName());
+app.setPath('userCache', path.resolve(prefsDir, 'cache'), app.getName());
+
 app.on('ready', () => {
 
   sites.filter(site => site.shortcut).forEach(site => {
-    console.log(site)
     globalShortcut.register(site.shortcut, () => {
         openUrl(site.url);
     });
@@ -96,7 +132,7 @@ app.on('ready', () => {
 
 // Quit when all windows are closed.
 app.on('window-all-closed', () => {
-  app.quit()
+  // app.quit()
 })
 
 

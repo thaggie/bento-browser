@@ -8,13 +8,13 @@ For now it's just working with a hard coded set of sites (in sites.json), sites 
 
 ## Usage
 
-There's no packaged version so you have to download and run from the terminal:
+There's no packaged version so you have to download and build it from the terminal:
 
 ```
 git clone git@github.com:thaggie/bento-browser.git
 cd bento-browser
 npm install
-npm start
+npm run package
 ```
 
 ## Future Work

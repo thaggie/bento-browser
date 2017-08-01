@@ -75,6 +75,20 @@
         ".guim.co.uk"
     ]
 }, {
+    "label": "The Independent",
+    "url": "https://www.independent.co.uk",
+    "partition": "linkedin",
+    "host": "www.independent.co.uk",
+    "hosts": [
+        ".independent.co.uk",
+        "code.jquery.com",
+        ".h-cdn.com",
+        ".brightcove.com",
+        ".brightcove.net",
+        ".llnwd.net"
+    ],
+    "stateful": false
+}, {
     "label": "Linked In",
     "shortcut": "CommandOrControl+8",
     "url": "https://www.linkedin.com",

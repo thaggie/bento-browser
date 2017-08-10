@@ -28,7 +28,9 @@
     "host": "boingboing.net",
     "hosts": [
         ".boingboing.net",
-        ".wp.com"
+        ".wp.com",
+        "www.youtube.com",
+        ".googlevideo.com"
     ]
 }, {
     "label": "Facebook",
@@ -77,7 +79,7 @@
 }, {
     "label": "The Independent",
     "url": "https://www.independent.co.uk",
-    "partition": "linkedin",
+    "partition": "independent",
     "host": "www.independent.co.uk",
     "hosts": [
         ".independent.co.uk",
@@ -97,7 +99,12 @@
     "hosts": [
         ".linkedin.com",
         ".licdn.com",
-        ".slidesharecdn.com"
+        ".slidesharecdn.com",
+        ".recaptcha.net",
+        ".gstatic.com",
+        ".cedexis.com",
+        ".google.com",
+        ".cedexis-radar.net"
     ],
     "stateful": true
 }, {

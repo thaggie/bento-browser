@@ -1,163 +1,137 @@
-[{
+[
+  {
     "label": "Amazon",
     "shortcut": "CommandOrControl+1",
     "url": "https://www.amazon.com",
     "partition": "amazon",
     "host": "www.amazon.com",
-    "hosts": [
-        ".amazon.com",
-        ".ssl-images-amazon.com",
-        ".media-amazon.com"
-    ]
-}, {
+    "hosts": [".amazon.com", ".ssl-images-amazon.com", ".media-amazon.com"]
+  },
+  {
     "label": "BBC News",
     "shortcut": "CommandOrControl+2",
     "url": "https://www.bbc.com/news",
     "partition": "bbc",
     "host": "www.bbc.com",
-    "hosts": [
-        ".bbc.com",
-        ".bbci.co.uk",
-        ".bbc.co.uk"
-    ]
-}, {
+    "hosts": [".bbc.com", ".bbci.co.uk", ".bbc.co.uk", ".llnwd.net"]
+  },
+  {
     "label": "Boing Boing",
     "shortcut": "CommandOrControl+3",
     "url": "https://boingboing.net",
     "partition": "boingboing",
     "host": "boingboing.net",
     "hosts": [
-        ".boingboing.net",
-        ".wp.com",
-        "www.youtube.com",
-        ".googlevideo.com"
+      ".boingboing.net",
+      ".wp.com",
+      "discourse-cdn.freetls.fastly.net",
+      "www.youtube.com"
     ]
-}, {
+  },
+  {
     "label": "Facebook",
     "shortcut": "CommandOrControl+4",
     "url": "https://www.facebook.com",
     "partition": "facebook",
     "host": "www.facebook.com",
-    "hosts": [
-        ".facebook.com",
-        ".fbcdn.net"
-    ],
+    "hosts": [".facebook.com", ".fbcdn.net"],
     "stateful": true
-}, {
+  },
+  {
     "label": "GMail",
     "shortcut": "CommandOrControl+5",
     "url": "https://www.gmail.com",
     "partition": "gmail",
     "host": "www.gmail.com",
     "hosts": [
-        ".gmail.com",
-        ".google.ca",
-        ".google.com",
-        ".gstatic.com",
-        ".googleusercontent.com"
+      ".gmail.com",
+      ".google.ca",
+      ".google.com",
+      ".gstatic.com",
+      ".googleusercontent.com"
     ],
     "stateful": true
-}, {
+  },
+  {
     "label": "Google",
     "shortcut": "CommandOrControl+6",
     "url": "http://duckduckgo.com",
     "partition": "duckduckgo",
     "host": "duckduckgo.com",
-    "hosts": [
-      ".duckduckgo.com"
-    ]
-}, {
+    "hosts": [".duckduckgo.com"]
+  },
+  {
     "label": "The Guardian",
     "shortcut": "CommandOrControl+7",
     "url": "https://www.theguardian.com",
     "partition": "guardian",
     "host": "www.theguardian.com",
-    "hosts": [
-        ".theguardian.com",
-        ".guim.co.uk"
-    ]
-}, {
-    "label": "The Independent",
-    "url": "https://www.independent.co.uk",
-    "partition": "independent",
-    "host": "www.independent.co.uk",
-    "hosts": [
-        ".independent.co.uk",
-        "code.jquery.com",
-        ".h-cdn.com",
-        ".brightcove.com",
-        ".brightcove.net",
-        ".llnwd.net"
-    ],
-    "stateful": false
-}, {
+    "hosts": [".theguardian.com", ".guim.co.uk"]
+  },
+  {
     "label": "Linked In",
     "shortcut": "CommandOrControl+8",
     "url": "https://www.linkedin.com",
     "partition": "linkedin",
     "host": "www.linkedin.com",
-    "hosts": [
-        ".linkedin.com",
-        ".licdn.com",
-        ".slidesharecdn.com",
-        ".recaptcha.net",
-        ".gstatic.com",
-        ".cedexis.com",
-        ".google.com",
-        ".cedexis-radar.net"
-    ],
+    "hosts": [".linkedin.com", ".licdn.com", ".slidesharecdn.com"],
     "stateful": true
-}, {
+  },
+  {
+    "label": "Medium",
+    "url": "https://www.linkedin.com",
+    "partition": "medium",
+    "host": "medium.com",
+    "hosts": [".medium.com"],
+    "stateful": false
+  },
+  {
     "label": "The Onion",
     "url": "http://www.theonion.com",
     "partition": "onion",
     "host": "www.theonion.com",
     "hosts": [
-        ".theonion.com",
-        ".onionstatic.com",
-        ".onionstudios.com",
-        "ssl.p.jwpcdn.com"
+      ".theonion.com",
+      ".onionstatic.com",
+      ".onionstudios.com",
+      "ssl.p.jwpcdn.com"
     ]
-}, {
+  },
+  {
     "label": "Twitter",
     "shortcut": "CommandOrControl+9",
     "url": "https://twitter.com",
     "partition": "twitter",
     "host": "twitter.com",
-    "hosts": [
-        ".twitter.com",
-        ".twimg.com"
-    ],
+    "hosts": [".twitter.com", ".twimg.com"],
     "stateful": true
-}, {
+  },
+  {
     "label": "Vancouver Sun",
     "url": "http://vancouversun.com",
     "partition": "vancouversun",
     "host": "vancouversun.com",
-    "hosts": [
-        ".vancouversun.com",
-        ".wp.com",
-        ".p.jwpcdn.com",
-        ".wordpress.com"
-    ]
-}, {
+    "hosts": [".vancouversun.com", ".wp.com", ".p.jwpcdn.com", ".wordpress.com"]
+  },
+  {
     "label": "The Verge",
     "url": "https://www.theverge.com",
     "partition": "verge",
     "host": "www.theverge.com",
-    "hosts": [
-        ".theverge.com",
-        ".vox-cdn.com"
-    ]
-}, {
+    "hosts": [".theverge.com", ".vox-cdn.com"]
+  },
+  {
+    "label": "The Washington Post",
+    "url": "https://www.washingtonpost.com",
+    "partition": "washingtonpost",
+    "host": "www.washingtonpost.com",
+    "hosts": [".washingtonpost.com"]
+  },
+  {
     "label": "You Tube",
     "url": "https://www.youtube.com",
     "partition": "youtube",
     "host": "www.youtube.com",
-    "hosts": [
-        ".googlevideo.com",
-        ".youtube.com",
-        ".gstatic.com",
-        ".ytimg.com"
-    ]
-}]
+    "hosts": [".googlevideo.com", ".youtube.com", ".gstatic.com", ".ytimg.com"]
+  }
+]

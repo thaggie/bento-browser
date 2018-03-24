@@ -6,6 +6,8 @@ This was inspired by Laura Kalbag's blog post [Digital Assistants, Facebook Quiz
 
 For now it's just working with a hard coded set of sites (in sites.json), sites not listed will launch in the OS browser.
 
+[Download Bento](https://www.dropbox.com/s/mm3m80p582g2xz4/Bento-darwin-x64.zip?dl=0)
+
 ## Usage
 
 There's no packaged version so you have to download and build it from the terminal:

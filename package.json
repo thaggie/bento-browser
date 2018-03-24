@@ -12,8 +12,8 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
-    "electron": "1.7.9",
-    "electron-packager": "9.1.0"
+    "electron": "1.8.4",
+    "electron-packager": "11.1.0"
   },
   "dependencies": {
     "electron-default-menu": "1.0.1"

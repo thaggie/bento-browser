@@ -36,6 +36,23 @@
     "host": "www.facebook.com",
     "hosts": [".facebook.com", ".fbcdn.net"],
     "stateful": true
+  },{
+    "label": "Daily Fail",
+    "url": "https://www.dailymail.co.uk",
+    "partition": "dailymail",
+    "host": "www.dailymail.co.uk",
+    "hosts": ["i.dailymail.co.uk", "scripts.dailymail.co.uk"],
+    "stateful": false
+  },
+  {
+    "label": "Globe and Mail",
+    "url": "https://www.theglobeandmail.com",
+    "partition": "globeandmail",
+    "host": "www.theglobeandmail.com",
+    "hosts": [
+      ".theglobeandmail.com"
+    ],
+    "stateful": false
   },
   {
     "label": "GMail",
@@ -48,7 +65,8 @@
       ".google.ca",
       ".google.com",
       ".gstatic.com",
-      ".googleusercontent.com"
+      ".googleusercontent.com",
+      ".ggpht.com"
     ],
     "stateful": true
   },

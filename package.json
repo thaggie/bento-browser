@@ -12,10 +12,14 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
-    "electron": "^2.0.2",
-    "electron-packager": "^12.1.0"
+    "electron": "^2.0.8",
+    "electron-packager": "^12.1.1",
+    "eslint-config-prettier": "^3.0.1",
+    "eslint-plugin-prettier": "^2.6.2",
+    "prettier": "^1.14.2"
   },
   "dependencies": {
-    "electron-default-menu": "^1.0.1"
+    "electron-default-menu": "^1.0.1",
+    "isomorphic-fetch": "^2.2.1"
   }
 }

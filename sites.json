@@ -57,9 +57,9 @@
   {
     "label": "GMail",
     "shortcut": "CommandOrControl+5",
-    "url": "https://www.gmail.com",
+    "url": "https://www.google.com/gmail",
     "partition": "gmail",
-    "host": "www.gmail.com",
+    "host": "www.google.com",
     "hosts": [
       ".gmail.com",
       ".google.ca",

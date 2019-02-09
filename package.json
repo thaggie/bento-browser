@@ -6,20 +6,19 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 0",
     "start": "electron .",
-    "package": "electron-packager . --overwrite"
+    "build": "electron-packager . --overwrite"
   },
   "keywords": [],
   "author": "",
   "license": "MIT",
-  "devDependencies": {
-    "electron": "^3.0.8",
-    "electron-packager": "^12.1.1",
-    "eslint-config-prettier": "^3.0.1",
-    "eslint-plugin-prettier": "^3.0.0",
-    "prettier": "^1.14.2"
-  },
+  "devDependencies": {},
   "dependencies": {
+    "electron": "^4.0.4",
     "electron-default-menu": "^1.0.1",
-    "isomorphic-fetch": "^2.2.1"
+    "electron-packager": "^13.0.1",
+    "eslint-config-prettier": "^4.0.0",
+    "eslint-plugin-prettier": "^3.0.1",
+    "isomorphic-fetch": "^2.2.1",
+    "prettier": "^1.16.4"
   }
 }

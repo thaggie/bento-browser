@@ -6,7 +6,7 @@ This was inspired by Laura Kalbag's blog post [Digital Assistants, Facebook Quiz
 
 For now it's just working with a hard coded set of sites (in sites.json), sites not listed will launch in the OS browser.
 
-[Download Bento](https://www.dropbox.com/s/mm3m80p582g2xz4/Bento-darwin-x64.zip?dl=0)
+[Download Bento](bento.zip)
 
 ## Usage
 
@@ -16,10 +16,11 @@ There's no packaged version so you have to download and build it from the termin
 git clone git@github.com:thaggie/bento-browser.git
 cd bento-browser
 npm install
-npm run package
+npm run build
 ```
 
 ## Future Work
-* UI chrome so there's back buttons etc.
-* User configuration rather than sites.json
-* Add a homepage to jump off to the sites rather than opening Facebook
+
+- UI chrome so there's back buttons etc.
+- User configuration rather than sites.json
+- Add a homepage to jump off to the sites rather than opening Facebook

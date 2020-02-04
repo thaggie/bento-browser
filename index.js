@@ -12,7 +12,7 @@ var path = require("path");
 const { parse } = require("url");
 const defaultMenu = require("electron-default-menu");
 
-const fetch = require('isomorphic-fetch');
+const fetch = require("isomorphic-fetch");
 const sites = require("./sites.json");
 const shortners = require("./shortners.json");
 
@@ -33,26 +33,26 @@ const getPrefsDir = () => {
   }
 };
 
-const openUrl = (urlString, stack=[]) => {
-  fetch(urlString, {method: 'HEAD', mode:'cors', redirect: 'manual'})
-  .then(response => {
-    if (response.status === 301) {
-      const location = response.headers.get('Location');
-      if (location !== urlString) {
-        openUrl(location, [...stack, urlString]);
+const openUrl = (urlString, stack = []) => {
+  fetch(urlString, { method: "HEAD", mode: "cors", redirect: "manual" }).then(
+    response => {
+      if (response.status === 301) {
+        const location = response.headers.get("Location");
+        if (location !== urlString) {
+          openUrl(location, [...stack, urlString]);
+        } else {
+          reallyOpenUrl(urlString, stack);
+        }
       } else {
-        reallyOpenUrl(urlString, stack);  
+        reallyOpenUrl(urlString, stack);
       }
-    } else {
-      reallyOpenUrl(urlString, stack);
     }
-  });
+  );
 };
 
 const reallyOpenUrl = (urlString, stack) => {
-
   if (stack.length > 0) {
-    console.log(stack.join(' -> '), '->', urlString);
+    console.log(stack.join(" -> "), "->", urlString);
   }
   const url = parse(urlString);
 
@@ -112,15 +112,17 @@ const reallyOpenUrl = (urlString, stack) => {
 };
 
 const prefsDir = getPrefsDir();
-app.setPath("userData", path.resolve(prefsDir, "data"), app.getName());
-app.setPath("userCache", path.resolve(prefsDir, "cache"), app.getName());
+app.setPath("userData", path.resolve(prefsDir, "data"), app.name);
+app.setPath("userCache", path.resolve(prefsDir, "cache"), app.name);
 
 app.on("ready", () => {
-  sites.filter(site => site.shortcut).forEach(site => {
-    globalShortcut.register(site.shortcut, () => {
-      openUrl(site.url);
+  sites
+    .filter(site => site.shortcut)
+    .forEach(site => {
+      globalShortcut.register(site.shortcut, () => {
+        openUrl(site.url);
+      });
     });
-  });
 
   // Get template for default menu
   const menu = defaultMenu(app, shell);

@@ -1,5 +1,13 @@
 [
   {
+    "label": "Boing Boing",
+    "shortcut": "CommandOrControl+2",
+    "url": "https://boingboing.net",
+    "partition": "boingboing",
+    "host": "boingboing.net",
+    "hosts": [".wp.com", ".boingboing.net"],
+    "stateful": false
+  },  {
     "label": "Facebook",
     "shortcut": "CommandOrControl+4",
     "url": "https://www.facebook.com",

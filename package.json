@@ -13,7 +13,7 @@
     "license": "MIT",
     "devDependencies": {},
     "dependencies": {
-        "electron": "^9.4.0",
+        "electron": "^13.6.6",
         "electron-default-menu": "^1.0.2",
         "electron-packager": "^15.2.0",
         "eslint-config-prettier": "^4.3.0",
